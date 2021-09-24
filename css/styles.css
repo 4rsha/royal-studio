@@ -1,0 +1,334 @@
+/* local استفاده از فونت دلخواه به صورت */
+@font-face {
+  font-family: "IranSans";
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/IRANSansWeb.eot');
+  src: url('../fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "IranSansBold";
+  font-weight: bold;
+  src: url('../fonts/IRANSans_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "IranSansBlack";
+  font-weight: bold;
+  src: url('../fonts/IRANSans_Black.ttf') format('truetype');
+}
+
+/* ریست اولیه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #65646b3d;
+  --blue-gray: #585860;
+  --dark-blue: #1d1b23;
+  --gold-orange: #fccf34;
+}
+
+/* حذف استایل پیش فرض لیست ها */
+ul {
+  list-style: none;
+}
+
+/* حذف استایل پیش فرض لیست آیتم ها */
+li {
+  list-style: none;
+}
+
+/* حذف استایل پیش لینک ها */
+a {
+  text-decoration: none;
+}
+
+/* تعیین اندازه پیش فرض فونت */
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(315deg, #e3e3e6 0%, #f8faff 74%);
+  font-family: "IranSans";
+}
+
+.container {
+  width: 100%;
+  /* width: 100vw; */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container .side-menu {
+  width: 5%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.3rem 0;
+}
+
+.container .side-menu svg {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.container nav {
+  direction: rtl;
+  position: relative;
+  top: 0;
+  right: -5%;
+  width: 95%;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 3rem;
+}
+
+.container nav .logo img {
+  width: 160px;
+}
+
+.container nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.container nav ul li {
+  font-size: 1.5rem;
+  padding: .6rem 2rem;
+  margin: 0 .7rem;
+  cursor: pointer;
+  transition: all .32s ease-out;
+}
+
+.container nav ul li:hover a {
+  color: var(--gold-orange)
+}
+
+.container nav ul li:first-child {
+  border: 2px solid #4c476e3d;
+}
+
+.container nav ul li:first-child:hover {
+  background: var(--dark-blue);
+}
+
+.container nav ul li a {
+  font-family: "IranSansBold";
+  color: var(--dark-blue);
+  transition: all .32s ease-out;
+}
+
+.hamburger, nav input {
+  display: none;
+}
+
+main {
+  width: 100%;
+  direction: rtl;
+  position: relative;
+  right: -5%;
+  width: 95%;
+  padding: 0 7rem;
+}
+
+.container .intro {
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  padding: 0 4rem;
+}
+
+.container .intro .main-title, .container .intro .contact-us {
+  flex: 1;
+}
+
+.container .intro .main-title h1 {
+  font-family: "IranSansBlack";
+  font-size: 2.8rem;
+  color: #564e6e;
+  position: relative;
+}
+
+.container .intro .main-title h1:before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -20px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--gold-orange);
+  z-index: -1;
+}
+
+.container .intro .contact-us h3 {
+  font-size: 1.5rem;
+  color: #4f4e58;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.container .intro .contact-us p {
+  font-size: 1.4rem;
+  font-family: "IranSansBold";
+  margin-bottom: 1rem;
+}
+
+.container .intro .contact-us .contact-form {
+  display: inline-block;
+  position: relative;
+  padding: 1rem 1.7rem;
+  background: #fff;
+}
+
+.container .intro .contact-us .contact-form button, 
+.container .intro .contact-us .contact-form input {
+  border: none;
+  outline: none;
+  font-family: "IranSans";
+  height: 80%;
+}
+
+.container .intro .contact-us .contact-form button {
+  background: #23212a;
+  color: #fff;
+  width: 110px;
+  height: 43px;
+  cursor: pointer;
+}
+
+.container .intro .contact-us .contact-form input {
+  width: 240px;
+}
+
+.container .intro .contact-us .contact-form:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: -15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #73f397;
+  z-index: -1;
+}
+
+.container .showcase {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container .showcase .person {
+  flex-basis: 30%;
+  position: relative;
+}
+
+.container .showcase .person img {
+  width: 350px;
+  margin-right: 3rem;
+}
+
+.container .showcase .projects-container {
+  flex-basis: 70%;
+}
+
+.container .showcase .projects-container .explore-all {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.container .showcase .projects-container .explore-all p,
+.container .showcase .projects-container .explore-all a {
+  font-weight: 800;
+  font-family: "IranSansBold";
+  margin-left: 6rem;
+  color: var(--dark-blue);
+}
+
+.container .showcase .projects-container .explore-all a {
+  padding: 1rem 2rem;
+  border: 2px solid #564e6e;
+  margin-top: 1rem;
+  transition: all .32s ease-out;
+}
+
+.container .showcase .projects-container .explore-all a i {
+  margin-right: 1rem;
+}
+
+.container .showcase .projects-container .explore-all a:hover {
+  background: var(--dark-blue);
+  color: var(--gold-orange);
+}
+
+.container .showcase .projects-container .projects img {
+  width: 24rem;
+  border: 10px solid #fff;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.container .showcase .projects-container .projects {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5rem;
+  margin-left: 3rem;
+}
+
+.container .showcase .person .demo {
+  position: absolute;
+  top: 2rem;
+  left: -10rem;
+  font-size: 1.4rem;
+  background: #c4bae14a;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 800;
+  font-family: "IranSansBold";
+  -webkit-text-stroke-width: 0.3px;
+  padding: 0 .8rem;
+  transition: all .32s ease-out;
+  cursor: pointer;
+}
+
+.container .showcase .person .demo a {
+  display: flex;
+  align-items: center;
+  color: #544e66;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.container .showcase .person .demo a i {
+  font-size: 45px;
+  color: #1d1b23ad;
+}

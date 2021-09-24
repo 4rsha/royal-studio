@@ -1,0 +1,244 @@
+@media (max-width: 1675px) {
+  main {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1290px) {
+  .container .showcase .person {
+    display: none;
+  }
+
+  .container .showcase {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1098px) {
+  .container .side-menu {
+    width: 7%;
+  }
+
+  .container nav {
+    width: 93%;
+    right: -7%;
+  }
+
+  .container nav ul li {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .container .side-menu {
+    display: none;
+  }
+
+  .container nav {
+    width: 100%;
+    right: 0;
+  }
+
+  .container nav ul {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    right: -20%;
+    background: #202020;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 8rem;
+    transition: all .4s ease;
+    z-index: 3;
+  }
+
+  .container nav ul li:first-child {
+    border: none;
+  }
+
+  .container nav ul li {
+    width: 70%;
+    font-size: 1.7rem;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e2e4eac0!important;
+  }
+
+  .container nav ul li:last-child {
+    border-bottom: none!important;
+  }
+
+  .container nav ul li a {
+    color: #e2e4ea;
+  }
+
+  .hamburger, nav input {
+    display: block;
+  }
+
+  .container nav .hamburger {
+    position: relative;
+    margin-right: 1rem;
+    z-index: 4;
+  }
+
+  .container nav .hamburger div {
+    width: 4.6rem;
+    height: 4px;
+    background: #585860;
+    margin: 1rem 0;
+  }
+
+  .container nav .hamburger div:nth-child(2) {
+    width: 2.8rem;
+  }
+
+  .container nav input[type=checkbox] {
+    position: absolute;
+    top: 5%;
+    right: -40%;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  .container nav input[type=checkbox]:checked + ul {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+  }
+
+  .container .showcase .projects-container {
+    display: none;
+  }
+  
+  .container .showcase .person {
+    display: block;
+    flex-basis: 60%;
+  }
+
+  .container .showcase .person img {
+    width: 250px;
+  }
+
+  .container .showcase .person .demo {
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    font-size: 1.3rem;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-family: "IranSansBold";
+    -webkit-text-stroke-width: 0.3px;
+    padding: 0 .8rem;
+    transition: all .32s ease-out;
+    cursor: pointer;
+  }
+
+  .container .intro .main-title h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container nav ul {
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 908px) {
+  .container .intro {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  .container .showcase .projects-container .explore-all {
+    display: none;
+  }
+  
+  .container .intro .main-title {
+    position: relative;
+    right: -50px;
+    margin-bottom: 2rem;
+  }
+
+  .container .showcase .projects-container .projects {
+    margin-top: 3rem;
+  }
+
+  .container .showcase .projects-container .projects img {
+    width: 19rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .container .showcase .person .demo {
+    display: none;
+  }
+
+  .contact-us p {
+    display: none;
+  }
+
+  .container .showcase .person {
+    display: block;
+    flex-basis: 100%;
+  }
+
+  .container .showcase .person img {
+    width: 30rem;
+    z-index: -1;
+  }
+
+  .container .intro {
+    margin-top: 2rem;
+  }
+
+  .container .intro .main-title h1 {
+    font-size: 2.2rem;
+  }
+
+  .container .intro .main-title {
+    right: -80px;
+  }
+
+  .container .intro .contact-us h3 {
+    font-size: 1.4rem;
+  }
+  
+}
+
+@media (max-width: 460px) {
+  .container .intro {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .container .intro .main-title {
+    right: -50px;
+  }
+  
+  .container .intro .contact-us .contact-form button {
+    width: 100px;
+  }
+  
+  .container .intro .contact-us .contact-form input {
+    width: 190px;
+  }
+}
